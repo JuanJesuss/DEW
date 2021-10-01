@@ -44,11 +44,16 @@ $bolsa = array (
     array("TELEFONICA", 0, 0, 0, 0, 0, 0, 0, 0),
     array("VISCOFAN", 0, 0, 0, 0, 0, 0, 0, 0));
 
-echo $bolsa[0][0]." ".$bolsa[0][1]." ".$bolsa[0][2]." ".$bolsa[0][3]." ".$bolsa[0][4]." ".$bolsa[0][5]." ".$bolsa[0][6]." ".$bolsa[0][7]." ".$bolsa[0][8]."<br>";
-echo $bolsa[1][0]." ".$bolsa[1][1]." ".$bolsa[1][2]." ".$bolsa[1][3]." ".$bolsa[1][4]." ".$bolsa[1][5]." ".$bolsa[1][6]." ".$bolsa[1][7]." ".$bolsa[1][8]."<br>";
-echo $bolsa[2][0]." ".$bolsa[2][1]." ".$bolsa[2][2]." ".$bolsa[2][3]." ".$bolsa[2][4]." ".$bolsa[2][5]." ".$bolsa[2][6]." ".$bolsa[2][7]." ".$bolsa[2][8]."<br>";
-echo $bolsa[3][0]." ".$bolsa[3][1]." ".$bolsa[3][2]." ".$bolsa[3][3]." ".$bolsa[3][4]." ".$bolsa[3][5]." ".$bolsa[3][6]." ".$bolsa[3][7]." ".$bolsa[3][8]."<br>";
-echo $bolsa[4][0]." ".$bolsa[4][1]." ".$bolsa[4][2]." ".$bolsa[4][3]." ".$bolsa[4][4]." ".$bolsa[4][5]." ".$bolsa[4][6]." ".$bolsa[4][7]." ".$bolsa[4][8]."<br>";
+$longitud=count($bolsa);
+ 
+for ($fila=0; $fila<$longitud; $fila++) {
+  echo "<p>Fila $fila</p>";
+  echo "<ul>";
+  for ($col=0; $col<9; $col++) {
+    echo "<li>".$bolsa[$fila][$col]."</li>";
+  }
+  echo "</ul>";
+}
 
 
 ?>
