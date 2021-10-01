@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-<TITLE>EJ1-Conversion IP Decimal a Binario</TITLE>
+<TITLE>EJERCICIO DE CLASE</TITLE>
 </HEAD>
 
 <BODY>
