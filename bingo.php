@@ -8,7 +8,7 @@
 
 <?php
 
-$carton = array();
+/*$carton = array();
 
 for ($i=0; $i<15; $i++) {
     $numeroAleatorio= rand(1,60);
@@ -22,8 +22,24 @@ for ($i=0; $i<15; $i++){
 $bombo=array();
 for($i=1; $i<=60; $i++){
     array_push($bombo,$i);
+}*/
+$carton = array();
+$cont=0;
+
+while($cont<=15){
+
+/*for ($i=0; $i<15; $i++) */
+    $numeroAleatorio= rand(1,60);
+    if(!in_array($numeroAleatorio, $carton))
+    array_push($carton,$numeroAleatorio);
+    $cont++;
 }
 
+
+
+for ($i=0; $i<15; $i++){
+    echo $carton[$i]."<br/>";
+}
 
 
 ?>
