@@ -8,39 +8,33 @@
 
 <?php
 
-/*$carton = array();
-
-for ($i=0; $i<15; $i++) {
-    $numeroAleatorio= rand(1,60);
-    array_push($carton,$numeroAleatorio);
-}
-
-for ($i=0; $i<15; $i++){
-    echo $carton[$i]."<br/>";
+//Creación cartón vacío    
+$carton=array();
+//Asignación números aleatorios al cartón
+$i=0;
+while (count($carton)<15)
+{
+    $bola=rand(1,60);    
+    if (! (in_array($bola,$carton)))
+        $carton[$i++]=$bola;
 }
 
 $bombo=array();
 for($i=1; $i<=60; $i++){
     array_push($bombo,$i);
-}*/
-$carton = array();
-$cont=0;
-
-while($cont<=15){
-
-/*for ($i=0; $i<15; $i++) */
-    $numeroAleatorio= rand(1,60);
-    if(!in_array($numeroAleatorio, $carton))
-    array_push($carton,$numeroAleatorio);
-    $cont++;
 }
 
-
-
-for ($i=0; $i<15; $i++){
-    echo $carton[$i]."<br/>";
+$aciertos=15;
+for($i=0; $i<60; $i++){
+$numero= $bombo[array_rand($bombo)];
+unset($bombo[$numero-1]);
+while($aciertos>0)
+if(in_array($numero, $carton)
+    $aciertos--;
 }
-
+if($aciertos==0){
+    echo "El jugador ha ganado";
+}
 
 ?>
 
