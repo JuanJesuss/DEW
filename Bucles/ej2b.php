@@ -2,7 +2,7 @@
 <HTML>
 
 <HEAD>
-<TITLE>EJ1B – Conversor decimal a binario</TITLE>
+<TITLE>EJ2B – Conversor decimal a base 8</TITLE>
 <META charset="utf-8"/>
 </HEAD>
 
@@ -10,16 +10,16 @@
 
 <?php
 
-$d=168;
+$d=48;
 
-echo "Número $d en binario = ";
+echo "Número $d en base 8 = ";
 
 $a= array();
 
 for($i=0; $i<10; $i++){
-    $b= $d%2;
+    $b= $d%8;
     $a[$i]=$b;
-    $d= intval($d/2);
+    $d= intval($d/8);
     if($d==0) break;
 }
 
