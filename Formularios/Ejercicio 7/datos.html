@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Datos alumnos</title>
+</head>
+
+<body>
+    <h1>Datos alumnos</h1>
+    <form action="datos.php" method="post">
+    <label for="nombre">Nombre: </label>
+    <input type="text" name="nombre"/>*Obligatorio<br><br>
+	<label for="apellido1">Apellido1: </label>
+    <input type="text" name="apellido1"/><br><br>
+    <label for="apellido2">Apellido2: </label>
+    <input type="text" name="apellido2"/><br><br>
+    <label for="email">Email: </label>
+    <input type="email" name="email"/>*Obligatorio<br><br>
+    Sexo:
+    <input type="radio" name="r" value="mujer"/>
+    <label for="mujer">Mujer</label>
+    <input type="radio" name="r" value="hombre"/> 
+	<label for="hombre">Hombre </label>*Obligatorio<br><br>
+    <input type="submit" value="Enviar"/>
+    <input type="reset" value="Borrar"/>
+    </form>
+</body>
+
+</html>
