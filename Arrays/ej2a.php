@@ -3,8 +3,8 @@
 <html>
 
 <head>
-<title>Ej1 Arrays unidimensionales</title>
-<link href="ej1aEstilos.css" rel="stylesheet" type="text/css" />
+<title>Ej2 Arrays unidimensionales</title>
+<link href="ej2aEstilos.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -26,14 +26,17 @@ echo "
 <th>Indice</th>
 <th>Valor</th>
 <th>Suma</th>
+<th>Media</th>
 </tr>";
 for($i=0; $i<$longitud; $i++){
 $suma=$suma+$numeros[$i];
+$media=($numeros[$i]+$suma)/2;
 echo "
 <tr>
 <td>$i</td>
 <td>$numeros[$i]</td>
 <td>$suma</td>
+<td>$media</td>
 </tr>";
 }
 echo"</table>";
