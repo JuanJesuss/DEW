@@ -7,8 +7,7 @@
       //Se recuperan del formulario el usuario y la clave del cliente
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
-      
-      $sql = "SELECT NIF FROM CLIENTE WHERE NOMBRE='$myusername' and cliente= '$mypassword'";
+     $sql = "SELECT NIF FROM CLIENTE WHERE NOMBRE='$myusername' and clave= '$mypassword'";
       $result = mysqli_query($db,$sql);
       //$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $row = mysqli_fetch_assoc($result);
