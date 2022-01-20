@@ -434,5 +434,17 @@ Function insertar_compra($conn, $nif, $idpro, $fecha){
     }
 }
 
+Function insertarRegistro($conn, $nif, $nom, $ape, $cp, $dir, $ciu, $pass){
+    $sql= "INSERT INTO CLIENTE (NIF, NOMBRE, APELLIDO, CP, DIRECCION, CIUDAD, cliente) VALUES ('$nif','$nom','$ape','$cp','$dir','$ciu','$pass');";
+    if(mysqli_query($conn, $sql)){
+        echo "Se ha registrado al cliente";
+    }
+    else{
+        echo "Error: ".$sql."<br>".mysqli_error($conn);
+    }
+
+
+}
+
 
 ?>
