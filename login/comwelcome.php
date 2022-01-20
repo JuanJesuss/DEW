@@ -1,8 +1,10 @@
 <?php 
    include('config.php');
-   //Se recuperan los valores de la sesión
+   
    session_start();
-     
+
+   if (isset($_SESSION['nif_cliente'])){
+   
 ?>
 
 <html>
@@ -41,9 +43,8 @@
 			header("location: logout.php");
 		}
 	}
+}
+else{
+	header("location: comlogincli.php");
+}
 ?>
-
-
-
-
-
