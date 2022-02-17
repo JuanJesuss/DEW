@@ -25,6 +25,30 @@ function comprobar_login($usuario,$clave,$db){
     }
 }
 
+function fechaActual(){
+    $date = getdate();
+    $fecha_actual= $date['year']."-".$date['mon']."-".$date['mday']." ".$date['hours'].":".$date['minutes'].":".$date['seconds'];
+    return $fecha_actual;
+}
+
+function cochesDisponibles($db){
+    $coches= array();
+    $sql= "SELECT MATRICULA FROM RVEHICULOS WHERE DISPONIBLE='S';";
+    if(mysqli_query($db, $sql)){
+        $result = mysqli_query($db, $sql);
+        if(mysqli_num_rows($result)>0){
+            while($row = mysqli_fetch_assoc($result)) {
+                $matricula= $row['MATRICULA'];
+                array_push($coches, $matricula);
+            }
+            return $coches;    
+        }
+    }
+    else{
+        echo "Error: ".$sql."<br>".mysqli_error($db);
+    }
+}
+
 
 
 ?>
